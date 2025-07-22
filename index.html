@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="invoice.js" defer></script>
+    <title> Locum Invoice Generator </title>  
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="form-container">
+            <h1>Locum Invoice Generator</h1>
+            <br>
+            <form id="form">
+                <label for="invoice-number">Invoice number</label>
+                <input type="number" id="invoice-number">
+                <br><br>
+
+                <label for="name">Pharmacist Name</label>
+                <input type="text" id="name" required>
+                <br><br>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+                <br><br>
+
+                <label for="start-time">Start time</label>
+                <input type="time" id="start-time" value="09:00" >
+                <br>
+
+                <label for="end-time">End time</label>
+                <input type="time" id="end-time" value="17:00">
+                <br><br>
+
+                <label for="rate">Rate per hour</label>
+                <input type="number" id="rate" required>
+                <br><br>
+
+                <label for="pharmacy-name">Pharmacy Name</label>
+                <input type="text" id="pharmacy-name" required>
+                <br><br>
+
+                <label for="pharmacy-postcode">Pharmacy postcode</label>
+                <input type="text" id="pharmacy-postcode" required>
+
+                <br><br>
+                <button type="submit" class="submit">Submit </button>
+            </form>
+            </div>
+
+         <div class="results-container">
+                <h2>Locum Pharmacist Invoice </h2>
+                <br><br>
+                    <p> <strong>Pharmacist Details:</strong><span id="pharmacist-name-details"></span></p>
+                    <p><strong>Employer Details:</strong><span id="pharmacy-name-details"></span></p>
+                    <p><strong>Shift Details:</strong></p>
+                <br>
+             <div class="table-container">
+                <table >
+                    <tr>
+                        <th scope="col">Shift Date</th>
+                        <th>Pharmacy</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th scope="col">Hours Worked </th>
+                        <th>Rate (£/hr)</th>
+                        <th scope="col">Total (£) </th>
+                        <th scope="col">Invoice No</th>
+                    </tr>
+                <tbody id="results-tbody"></tbody>
+                     
+                 </table> 
+                </div>
+            <br><br><br>
+            <p><strong>Total Amount Due (£): <span id="final-total"></span></strong></p>
+            <button id="new-entry">Add Entry</button>
+            </div>
+
+           
+
+          
+
+         
+</body>
+</html>
+
